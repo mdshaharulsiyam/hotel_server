@@ -77,9 +77,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // response default (welcome) route
-app.get('/', async(req,res)=>{
-  res.send('server is running')
-});
+app.get('/', defaultController);
 
 // sets application API's routes
 app.use('/api/v1', authRoute); // auth routes
